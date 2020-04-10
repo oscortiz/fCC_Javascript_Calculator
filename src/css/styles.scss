@@ -1,0 +1,196 @@
+$color: #0A7E8C;
+$colorOperator: lighten(#0A7E8C, 40%);
+$colorAction: #c24757;
+$colorEquals: #289e42;
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;  
+  background:
+    linear-gradient(to bottom,
+    #b97979 0%,
+    darken(#b97979, 20%) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;    
+  background-attachment: fixed;
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+#calculator {
+  background-color: #b1bdc0;
+  background-image: url("http://getwallpapers.com/wallpaper/full/7/d/2/159283.jpg");
+  border-radius: 15px;
+  border-bottom: #5a5a5a solid 1px;
+  height: 525px;
+  user-select: none;
+  box-shadow:
+    0 3px 0px 0px #afafaf,
+    0 6px 0px 0px #a0a0a0,
+    0 9px 0px 0px #8c8c8c,
+    0 12px 0px 0px #828282,
+    0 14px 0px 0px #787878;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 540px;
+    border-radius: 15px;
+    border-bottom: #000000 1px solid;  
+  }
+
+  #screen {
+    color: lighten(#414185, 10%);
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    background-color: #b1bdc0;
+    border-top: lighten(#b4b1b1, 10%) solid 1px;
+    border-bottom: darken(#b4b1b1, 10%) solid 1px;
+
+    .message {
+      color: lighten(#b10e0e, 10%);
+      font-size: 1rem;
+    }
+  }
+
+  #title, #subtitle {
+    text-shadow: 
+      0 -2px 0 darken(#000000, 30%),
+      0 1px 1px lighten(#000000, 60%);
+    color: darken(#535252, 10%);
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+  }
+
+  #subtitle {
+    font-size: .9rem;
+  }  
+}
+
+.key {
+  cursor: pointer; 
+  font-size: 1.6em;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  transition: all .2s;
+
+  &:active {
+    transform: translate(0px, 3px);
+    border-bottom: 1px solid;
+    box-shadow: none;    
+  }
+}
+
+.number {
+  text-shadow: 
+    0 -2px 0 darken($color, 30%),
+    0 1px 1px lighten($color, 30%);  
+  color: darken($color, 10%);  
+  border: $color solid 1px;  
+  background:
+    linear-gradient(to bottom,
+    lighten($color, 15%) 25%,
+    $color 100%);
+  border-top: 1px solid lighten($color, 6%);
+  border-bottom: 1px solid lighten($color, 10%);	
+  box-shadow:
+    0 4px 0 darken($color, 10%),
+    0 5px 10px rgba(0,0,0,.25); 
+    
+  &:hover {
+    background:
+      linear-gradient(to bottom,
+      lighten($color, 25%) 30%,
+      lighten($color, 10%) 80%);
+  }     
+}
+
+.operator {
+  text-shadow: 
+    0 -2px 0 darken($colorOperator, 60%),
+    0 1px 1px lighten($colorOperator, 10%);  
+  color: darken($colorOperator, 35%);  
+  border: $colorOperator solid 1px;
+  background:
+    linear-gradient(to bottom,
+    $colorOperator 25%,
+    $colorOperator 100%);	
+  box-shadow:
+    0 4px 0 darken($colorOperator, 40%),
+    0 5px 10px rgba(0,0,0,.25);
+    
+  &:hover {
+    background:
+      linear-gradient(to bottom,
+      darken($colorOperator, 15%) 30%,
+      darken($colorOperator, 5%) 80%);
+  }    
+}
+
+.action {
+  text-shadow: 
+    0 -2px 0 darken($colorAction, 30%),
+    0 1px 1px lighten($colorAction, 30%);  
+  color: darken($colorAction, 10%);  
+  border: $colorAction solid 1px;  
+  background:
+    linear-gradient(to bottom,
+    lighten($colorAction, 15%) 25%,
+    $colorAction 100%);
+  border-top: 1px solid lighten($colorAction, 6%);
+  border-bottom: 1px solid lighten($colorAction, 10%);	
+  box-shadow:
+    0 4px 0 darken($colorAction, 10%),
+    0 5px 10px rgba(0,0,0,.25); 
+    
+  &:hover {
+    background:
+      linear-gradient(to bottom,
+      lighten($colorAction, 25%) 30%,
+      lighten($colorAction, 10%) 80%);
+  }   
+}
+
+#equals {
+  text-shadow: 
+    0 -2px 0 darken($colorEquals, 30%),
+    0 1px 1px lighten($colorEquals, 30%);  
+  color: darken($colorEquals, 10%);  
+  border: $colorEquals solid 1px;  
+  background:
+    linear-gradient(to bottom,
+    lighten($colorEquals, 15%) 25%,
+    $colorEquals 100%);
+  border-top: 1px solid lighten($colorEquals, 6%);
+  border-bottom: 1px solid lighten($colorEquals, 10%);	
+  box-shadow:
+    0 4px 0 darken($colorEquals, 10%),
+    0 5px 10px rgba(0,0,0,.25); 
+    
+  &:hover {
+    background:
+      linear-gradient(to bottom,
+      lighten($colorEquals, 25%) 30%,
+      lighten($colorEquals, 10%) 80%);
+  }   
+}
+
+#multiply {
+  font-size: 1.1em;
+}
+
+#del {
+  font-size: 2.5em;
+}
+
